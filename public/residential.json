@@ -9,11 +9,11 @@
       "status": "sale",
       "area": "3000 sq ft",
       "location": "Suburban neighborhood",
-      "facilities": ["Large backyard", "Garage", "Multiple bedrooms"]
+      "facilities": ["#Large backyard", "#Garage", "#Multiple bedrooms"]
       
     },
     {
-      "image": "https://i.ibb.co/jRsQvjR/3d-house-model-with-modern-architecture.jpg",
+      "image": "https://i.ibb.co/p15ZnYc/new-buildings-with-green-areas.jpg",
       "estate_title": "Modern Townhouse",
       "id": "002",
       "segment_name": "Residential",
@@ -22,7 +22,7 @@
       "status": "sale",
       "area": "2000 sq ft",
       "location": "Urban district",
-      "facilities": ["Open-plan living area", "Community garden", "Private balcony"]
+      "facilities": ["#Open-plan living area", "#Community garden", "#Private balcony"]
       
     },
     {
@@ -35,7 +35,7 @@
       "status": "rent",
       "area": "1500 sq ft",
       "location": "Downtown",
-      "facilities": ["Fitness center", "Swimming pool", "Concierge service"]
+      "facilities": ["#Fitness center", "#Swimming pool", "#Concierge service"]
       
     },
     {
@@ -48,7 +48,7 @@
       "status": "rent",
       "area": "1000 sq ft",
       "location": "Near university campus",
-      "facilities": ["Study lounges", "Laundry facilities", "Individual leases"]
+      "facilities": ["#Study lounges", "#Laundry facilities", "#Individual leases"]
       
     },
     {
@@ -61,7 +61,7 @@
       "status": "rent",
       "area": "1800 sq ft",
       "location": "Retirement village",
-      "facilities": ["Dining facilities", "Healthcare services", "Recreational activities"]
+      "facilities": ["#Dining facilities", "#Healthcare services", "#Recreational activities"]
       
     },
     {
@@ -74,7 +74,7 @@
       "status": "rent",
       "area": "2500 sq ft",
       "location": "Coastal area",
-      "facilities": ["Private beach access", "Infinity pool", "Outdoor dining area"]
+      "facilities": ["#Private beach access", "#Infinity pool", "#Outdoor dining area"]
       
     }
   ]

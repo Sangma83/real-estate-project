@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const FeatureProperty = ({features}) => {
-    const { id, image,estate_title, status,location, area, price, description, segment_name } = features;
+    const { id, image,estate_title, status,location, area, price, description, segment_name, facilities } = features;
     return (
           <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
@@ -18,9 +18,10 @@ const FeatureProperty = ({features}) => {
     </div>
     
     <p>{description}</p>
-    
-    <div>
+    <p>{facilities}</p>
+    <div className="">
        <Link to={`/features/${id}`}> <button className="btn btn-error text-white">View Property</button></Link>
+       
     </div>
   </div>
 </div>
