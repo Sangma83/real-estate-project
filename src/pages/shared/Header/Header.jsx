@@ -1,4 +1,4 @@
-
+import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
     return (
@@ -6,7 +6,7 @@ const Header = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold text-white border">Your dream home is our top priority</h1>
+            <h1 className="mb-5 text-5xl font-bold text-white">Your dream home is our top priority</h1>
             <p className="mb-5 text-white">And In Order To Make A Business, Brand Advertising And Marketing Plays
               An Important Role. Similarly, In Making Cultivation Business A Brand,
               Good Slogans Are Necessary.</p>
@@ -30,6 +30,10 @@ const Header = () => {
   <div className="stat place-items-center">
     <div className="stat-title text-black font-bold">Price Range</div>
     <div className="stat-desc text-neutral-800">Choose Price Range</div>
+  </div>
+
+  <div className="stat place-items-center text-orange-500">
+  <FaSearch />
   </div>
   
 </div>

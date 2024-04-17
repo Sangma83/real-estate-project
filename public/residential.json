@@ -1,0 +1,80 @@
+[
+    {
+      "image": "https://i.ibb.co/YBSCS3x/full-shot-happy-parents-kid.jpg",
+      "estate_title": "Spacious Family Home",
+      "id": "001",
+      "segment_name": "Residential",
+      "description": "Beautiful single-family home with ample space for a growing family.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Suburban neighborhood",
+      "facilities": ["Large backyard", "Garage", "Multiple bedrooms"]
+      
+    },
+    {
+      "image": "https://i.ibb.co/jRsQvjR/3d-house-model-with-modern-architecture.jpg",
+      "estate_title": "Modern Townhouse",
+      "id": "002",
+      "segment_name": "Residential",
+      "description": "Contemporary townhouse featuring sleek design and convenient amenities.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Urban district",
+      "facilities": ["Open-plan living area", "Community garden", "Private balcony"]
+      
+    },
+    {
+      "image": "https://i.ibb.co/x6knWMp/tidy-hall-with-two-pictures-wall.jpg",
+      "estate_title": "Luxury Apartment",
+      "id": "003",
+      "segment_name": "Residential",
+      "description": "Stunning luxury apartment offering panoramic city views and upscale living.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Downtown",
+      "facilities": ["Fitness center", "Swimming pool", "Concierge service"]
+      
+    },
+    {
+      "image": "https://i.ibb.co/4NvSHRC/cheerful-students-posing-college.jpg",
+      "estate_title": "Student Housing Complex",
+      "id": "004",
+      "segment_name": "Residential",
+      "description": "Modern student housing complex providing comfortable living spaces for students.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "Near university campus",
+      "facilities": ["Study lounges", "Laundry facilities", "Individual leases"]
+      
+    },
+    {
+      "image": "https://i.ibb.co/R4J69zB/medium-shot-friends-chatting-indoors.jpg",
+      "estate_title": "Senior Living Community",
+      "id": "005",
+      "segment_name": "Residential",
+      "description": "A peaceful senior living community offering assisted care and vibrant social activities.",
+      "price": "$4,000/month",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "Retirement village",
+      "facilities": ["Dining facilities", "Healthcare services", "Recreational activities"]
+      
+    },
+    {
+      "image": "https://i.ibb.co/WzZYR6f/coconut-landscape-green-tropical-swimming.jpg",
+      "estate_title": "Beachfront Vacation Rental",
+      "id": "006",
+      "segment_name": "Residential",
+      "description": "A luxurious beachfront vacation rental with breathtaking ocean views.",
+      "price": "$500/night",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Coastal area",
+      "facilities": ["Private beach access", "Infinity pool", "Outdoor dining area"]
+      
+    }
+  ]

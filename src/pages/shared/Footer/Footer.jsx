@@ -1,4 +1,6 @@
 import logo from '../../../assets/logo.png';
+import { FaBehance, FaFacebook, FaSlack } from "react-icons/fa6";
+import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
     return (
@@ -10,6 +12,9 @@ const Footer = () => {
         <p className='text-xl -mt-10 text-blue-900 font-bold'>Maple<span className='text-orange-500'>Ridge</span></p>
     
     <p>Maple Ridge Industries Ltd.<br/>Providing reliable since 1998</p>
+    <div className="flex gap-4 text-xl">
+    <FaFacebook /><BsInstagram /><FaSlack /><FaBehance />
+    </div>
   </aside> 
   <nav>
     <h6 className="footer-title">Services</h6> 
