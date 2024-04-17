@@ -1,13 +1,16 @@
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
 import loginPic from "../../assets/login.jpg";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -24,7 +27,7 @@ const Login = () => {
  
              //navigate after login
  
-            //  navigate(location?.state ? location.state : '/');
+             navigate(location?.state ? location.state : '/');
          })
          .catch(error =>{
              console.error(error)
