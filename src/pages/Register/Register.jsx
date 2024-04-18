@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -69,6 +70,10 @@ const Register = () => {
     return (
         
         <div>
+
+             <Helmet>
+                <title>Maple Ridge || Register</title>
+            </Helmet>
             <Navbar></Navbar>
 
     <div className="hero min-h-screen my-16">

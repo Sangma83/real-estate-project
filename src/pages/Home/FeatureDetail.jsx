@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const FeatureDetail = ({ features }) => { 
     const [feature, setFeature] = useState({});
@@ -24,6 +25,9 @@ const FeatureDetail = ({ features }) => {
 
     return (
         <div>
+            <Helmet>
+                <title>Maple Ridge || Details</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="card lg:card-side bg-base-100 shadow-xl my-10">
                 <figure><img src={feature?.image} alt="Property"/></figure> 

@@ -4,6 +4,7 @@ import Header from "../shared/Header/Header";
 import Navbar from "../shared/Navbar/Navbar";
 import CategoriesSlider from "./CategoriesSlider";
 import FeatureProperty from "./FeatureProperty";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -11,6 +12,9 @@ const Home = () => {
     // console.log(features);
     return (
         <div>
+            <Helmet>
+                <title>Maple Ridge || Home</title>
+            </Helmet>
             <Navbar></Navbar>
             <Header></Header>
             <CategoriesSlider></CategoriesSlider>

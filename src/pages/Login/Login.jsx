@@ -9,11 +9,12 @@ import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
-    const [registerError, setRegisterError] = useState('');
+    const [loginError, setLoginError] = useState('');
    const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const location = useLocation();
@@ -29,15 +30,15 @@ const Login = () => {
         console.log(email, password);
 
          //reset error
-         setRegisterError('');
-         setSuccess('')
+         setLoginError('');
+        //  setSuccess('')
 
          //create user
          signIn(email, password)
          .then(result =>{
              console.log(result.user);
              setSuccess();
-            toast("Login Successfully!");
+            toast("User Log in Successfully!");
  
              //navigate after login
  
@@ -48,7 +49,7 @@ const Login = () => {
          .catch(error =>{
              console.error(error);
              // Display error message
-             setRegisterError();
+             setLoginError();
              toast.error('Invalid email or password. Please try again.');
          })
     }
@@ -68,6 +69,9 @@ const Login = () => {
     return (
         
         <div>
+          <Helmet>
+                <title>Maple Ridge || Login</title>
+            </Helmet>
             <Navbar></Navbar>
 
     <div className="hero min-h-screen my-16">
@@ -110,7 +114,10 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login<ToastContainer></ToastContainer></button>
           {
-          registerError && <p>{registerError}</p>
+          loginError && <p>{loginError}</p>
+          }
+          {
+        success && <p>{success}</p>
           }
         </div>
         <p>Do not Have an account? <Link className="text-blue-400 font-bold" to='/register'>Register</Link></p>
