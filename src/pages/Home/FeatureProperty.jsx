@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FeatureDetail from "./FeatureDetail";
 
 
 const FeatureProperty = ({features}) => {
@@ -20,7 +21,7 @@ const FeatureProperty = ({features}) => {
     <p>{description}</p>
     <p>{facilities}</p>
     <div className="">
-       <Link to={`/features/${id}`}> <button className="btn btn-error text-white">View Property</button></Link>
+    <Link to={`/features/${id}`}> <button className="btn btn-error text-white">View Property</button></Link>
        
     </div>
   </div>

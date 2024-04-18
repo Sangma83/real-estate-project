@@ -1,8 +1,10 @@
 import { FaSearch } from "react-icons/fa";
+import banner from '../../../assets/ban1.jpg'
 
 const Header = () => {
     return (
-        <div className="hero min-h-screen" style={{backgroundImage: 'url(src/assets/ban1.jpg)'}}>
+        <div className="hero min-h-screen">
+            <img src={banner} alt="" />
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">

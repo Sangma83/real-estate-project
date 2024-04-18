@@ -45,8 +45,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src={defaultPic} />
+        <div className="w-10 rounded-full tooltip tooltip-open tooltip-left" data-tip="hello">
+          <img alt="Tailwind CSS Navbar component" className="" src={defaultPic}  />
         </div>
       </div>
       {

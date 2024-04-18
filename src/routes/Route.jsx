@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home";
 import Root from "../layouts/Root";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import FeatureDetail from "../pages/FeaturesDetail/FeatureDetail";
+import FeatureDetail from "../pages/Home/FeatureDetail";
 import PrivateRoute from "./PrivateRoute";
 
 

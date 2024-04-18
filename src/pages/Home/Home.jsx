@@ -8,7 +8,7 @@ import FeatureProperty from "./FeatureProperty";
 
 const Home = () => {
     const features = useLoaderData();
-    console.log(features);
+    // console.log(features);
     return (
         <div>
             <Navbar></Navbar>
@@ -26,7 +26,9 @@ const Home = () => {
                     features={feature}
                     ></FeatureProperty>)
                 }
+               
                 </div>
+        
             </div>
             <Footer></Footer>
         </div>
