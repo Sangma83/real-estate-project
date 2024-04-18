@@ -18,7 +18,64 @@ const CategoriesSlider = () => {
     return (
       <div className='my-12 container'>
         <h2 className="text-3xl text-center font-bold mb-5 text-orange-600">Blogs</h2>
-        
+        <style>
+          {`
+          /* Custom styles for the slider */
+          .swiper-container {
+            width: 100%;
+            padding: 50px 0;
+          }
+          
+          .swiper-slide {
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          
+          .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          
+          .swiper-button-prev,
+          .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+          
+          .swiper-button-prev ion-icon,
+          .swiper-button-next ion-icon {
+            font-size: 24px;
+          }
+          
+          .swiper-button-prev {
+            left: 20px;
+          }
+          
+          .swiper-button-next {
+            right: 20px;
+          }
+          
+          .swiper-pagination {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          `}
+        </style>
        <Swiper
        effect={ 'coverflow' }
        grabCursor={ true }
