@@ -3,6 +3,7 @@ import logo from '../../../assets/logo.png';
 import defaultPic from '../../../assets/default.jpg';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
+// import ReactTooltip from 'react-tooltip';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -19,6 +20,12 @@ const Navbar = () => {
        <li><NavLink to='/about'>About Us</NavLink></li>
        <li><NavLink to='/login'>Login</NavLink></li>
        <li><NavLink to='/register'>Register</NavLink></li>
+      {
+        user && <>
+         <li><NavLink to='/Blog'>Blog</NavLink></li>
+         <li><NavLink to='/profile'>Profile</NavLink></li>
+        </>
+      }
     
     </>
 
@@ -44,16 +51,22 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full tooltip tooltip-open tooltip-left" data-tip="hello">
-          <img alt="Tailwind CSS Navbar component" className="" src={defaultPic}  />
-        </div>
-      </div>
-      {
-        user ? 
-        <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button> : 
-        <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
-      }
+  {/* Conditional rendering based on user authentication */}
+  {user ? (
+                    <>
+                       
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" data-tip={user.name}>
+                            <div className="w-10 rounded-full">
+                                <img alt="User profile" className="" src={user.profileImage || defaultPic} />
+                            </div>
+                        </div>
+                       
+                        <span>{user?.name}</span>
+                        <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
+                    </>
+                ) : (
+                    <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
+                )}
   </div>
 </div>
     );

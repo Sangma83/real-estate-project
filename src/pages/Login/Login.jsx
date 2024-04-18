@@ -5,15 +5,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { signInWithPopup } from "firebase/auth";
-import { FaEye } from "react-icons/fa6";
+import { FaEye, FaGithub } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
+import { FcGoogle } from "react-icons/fc";
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
    const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +26,7 @@ const Login = () => {
         e.preventDefault();
         console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
-        const email = form.get('email')
+        const email = form.get('email');
         const password = form.get('password')
         console.log(email, password);
 
@@ -56,10 +57,20 @@ const Login = () => {
 
 
     const handleGoogleSignIn = () =>{
-      signInWithPopup(auth, googleProvider)
+      signInWithGoogle()
       .then(result =>{
-        const loggedUser = result.user
-        console.log(loggedUser);
+        console.log(result.user);
+        
+      })
+      .catch(error => {
+        console.error(error)
+      })
+    }
+    const handleGithubSignIn = () =>{
+      signInWithGithub()
+      .then(result =>{
+        console.log(result.user);
+        
       })
       .catch(error => {
         console.error(error)
@@ -124,7 +135,10 @@ const Login = () => {
         {
         success && <p>{success}</p>
         }
-        <button onClick={handleGoogleSignIn} className="btn btn-ghost">Google</button>
+        <div className="flex gap-4 items-center ml-20">
+        <button onClick={handleGoogleSignIn} className="btn btn-ghost text-3xl"><FcGoogle /></button>
+        <button onClick={handleGithubSignIn} className="btn btn-ghost text-3xl"><FaGithub /></button>
+        </div>
       </form>
     </div>
   </div>

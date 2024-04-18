@@ -6,12 +6,16 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import FeatureDetail from "../pages/Home/FeatureDetail";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import FeatureProperty from "../pages/Home/FeatureProperty";
+import Profile from "../pages/Profile/Profile";
 
 
 const route = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -29,6 +33,14 @@ const route = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/estates',
+                element: <PrivateRoute><FeatureProperty></FeatureProperty></PrivateRoute>
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             }
         ]
     }
