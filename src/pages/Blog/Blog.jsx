@@ -30,27 +30,27 @@ const Blog = () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
       image: 'https://i.ibb.co/yVCb4mf/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg',
     },
-    {
-      id: 4,
-      title: '5 Tips for Buying Your First Home',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
-      image: 'https://i.ibb.co/kMbXBgy/roam-in-color-z3-QZ6gj-GRt4-unsplash.jpg',
-    },
-    {
-      id: 5,
-      title: 'Top Trends in Real Estate for 2024',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
-      image: 'https://i.ibb.co/PZ8vy5L/douglas-sheppard-9r-Yf-G8s-WRVo-unsplash.jpg',
-    },
-    {
-      id: 6,
-      title: 'How to Stage Your Home for a Quick Sale',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
-      image: 'https://i.ibb.co/yVCb4mf/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg',
-    },
+    // {
+    //   id: 4,
+    //   title: '5 Tips for Buying Your First Home',
+    //   content:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
+    //   image: 'https://i.ibb.co/kMbXBgy/roam-in-color-z3-QZ6gj-GRt4-unsplash.jpg',
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Top Trends in Real Estate for 2024',
+    //   content:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
+    //   image: 'https://i.ibb.co/PZ8vy5L/douglas-sheppard-9r-Yf-G8s-WRVo-unsplash.jpg',
+    // },
+    // {
+    //   id: 6,
+    //   title: 'How to Stage Your Home for a Quick Sale',
+    //   content:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
+    //   image: 'https://i.ibb.co/yVCb4mf/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg',
+    // },
   ];
 
   return (
