@@ -4,7 +4,6 @@ import loginPic from "../../assets/login.jpg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { signInWithPopup } from "firebase/auth";
 import { FaEye, FaGithub } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";

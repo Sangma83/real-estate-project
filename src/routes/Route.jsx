@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import FeatureProperty from "../pages/Home/FeatureProperty";
 import Profile from "../pages/Profile/Profile";
+import Blog from "../pages/Blog/Blog";
 
 
 const route = createBrowserRouter([
@@ -41,6 +42,10 @@ const route = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path: '/blog',
+                element: <PrivateRoute><Blog></Blog></PrivateRoute>
             }
         ]
     }

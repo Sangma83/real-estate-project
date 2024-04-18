@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const FeatureProperty = ({features}) => {
     const { id, image,estate_title, status,location, area, price, description, segment_name, facilities } = features;
     return (
-      <Link to='/estates'>
+     
         
             
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -29,8 +29,7 @@ const FeatureProperty = ({features}) => {
     </div>
   </div>
 </div>
- 
-</Link>
+
     );
 };
 

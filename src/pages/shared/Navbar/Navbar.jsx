@@ -22,7 +22,7 @@ const Navbar = () => {
        <li><NavLink to='/register'>Register</NavLink></li>
       {
         user && <>
-         <li><NavLink to='/Blog'>Blog</NavLink></li>
+         <li><NavLink to='/blog'>Blog</NavLink></li>
          <li><NavLink to='/profile'>Profile</NavLink></li>
         </>
       }
@@ -56,7 +56,7 @@ const Navbar = () => {
                     <>
                        
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" data-tip={user.name}>
-                            <div className="w-10 rounded-full">
+                            <div className="w-10 rounded-full" >
                                 <img alt="User profile" className="" src={user.profileImage || defaultPic} />
                             </div>
                         </div>
