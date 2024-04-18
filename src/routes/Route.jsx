@@ -25,7 +25,8 @@ const route = createBrowserRouter([
             },
             {
                 path: '/features/:id',
-                element: <PrivateRoute><FeatureDetail></FeatureDetail></PrivateRoute>
+                element: <PrivateRoute><FeatureDetail></FeatureDetail></PrivateRoute>,
+                loader: () => fetch('../residential.json')
             },
             {
                 path: '/login',

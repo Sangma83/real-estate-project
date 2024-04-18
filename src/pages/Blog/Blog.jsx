@@ -1,9 +1,8 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { useState } from 'react';
+import 'animate.css';
 import Navbar from '../shared/Navbar/Navbar';
 import Footer from '../shared/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Blog = () => {
   // Dummy data for blog posts
@@ -29,42 +28,35 @@ const Blog = () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed tellus tristique, ac tincidunt odio auctor. Nulla facilisi. Sed euismod purus quis nisi consequat fermentum.',
       image: 'https://i.ibb.co/yVCb4mf/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg',
     },
-   
   ];
+
+  // State to track hovered post
+  const [hoveredPost, setHoveredPost] = useState(null);
 
   return (
     <div className="container mx-auto py-8 ">
-        <Navbar></Navbar>
+      <Helmet>
+        <title>Maple Ridge || Blog</title>
+      </Helmet>
+      <Navbar />
       <h1 className="text-3xl font-bold mb-4 my-10 text-orange-700">Real Estate Blog</h1>
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        }}
-      >
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
-          <SwiperSlide key={post.id}>
-            <div className="bg-white rounded-lg shadow-md p-6 mb-20">
-              <img src={post.image} alt={post.title} className="w-full h-40 object-cover mb-4 rounded-lg" />
-              <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-              <p className="text-gray-600">{post.content}</p>
-            </div>
-          </SwiperSlide>
+          <div
+            key={post.id}
+            className={`bg-white rounded-lg shadow-md p-6 mb-20 animate__animated ${hoveredPost === post.id ? 'animate__zoomIn' : ''}`}
+            style={{ transform: `scale(${hoveredPost === post.id ? '1.05' : '1'})`, transition: 'transform 0.3s ease-in-out' }}
+            onMouseEnter={() => setHoveredPost(post.id)}
+            onMouseLeave={() => setHoveredPost(null)}
+          >
+            <img src={post.image} alt={post.title} className="w-full h-40 object-cover mb-4 rounded-lg" />
+            <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
+            <p className="text-gray-600">{post.content}</p>
+          </div>
         ))}
-      </Swiper>
-      <Footer></Footer>
+      </div>
+      <Footer />
     </div>
   );
 };
