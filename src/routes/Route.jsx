@@ -10,6 +10,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import FeatureProperty from "../pages/Home/FeatureProperty";
 import Profile from "../pages/Profile/Profile";
 import Blog from "../pages/Blog/Blog";
+import Contact from "../pages/Contact/Contact";
 
 
 const route = createBrowserRouter([
@@ -31,6 +32,10 @@ const route = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             },
             {
                 path: '/register',
