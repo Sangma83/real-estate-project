@@ -14,7 +14,7 @@ const FeatureProperty = ({features}) => {
   <div className="card-body">
     <h2 className="card-title">
       {estate_title}
-      <div className="badge bg-[#FF7F00] text-white">{status}</div>
+      <div className="btn ml-36 -mt-32 px-8 bg-[#FF7F00] text-white mask mask-parallelogram-3 skeleton">{status}</div>
     </h2>
         <p className="font-bold">{location},{area}</p>
         <div className="card-actions justify-end">

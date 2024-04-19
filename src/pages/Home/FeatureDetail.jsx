@@ -21,7 +21,7 @@ const FeatureDetail = () => {
                 <figure className=""><img className=" shadow-2xl rounded-lg" src={feature?.image} alt="Property"/></figure> 
                 <div className="card-body w-full p-14 ml-10">
                     <h2 className="card-title">{feature?.estate_title}</h2>
-                    <div className="badge badge-secondary">{feature?.status}</div>
+                    <div className="badge bg-[#FF7F00] text-white skeleton">{feature?.status}</div>
                     <p>{feature?.location}, {feature?.area}</p>
                     <div className="card-actions justify-end">
                         <p className="font-bold text-orange-400">{feature?.price}</p>
