@@ -5,6 +5,8 @@ import Navbar from "../shared/Navbar/Navbar";
 import CategoriesSlider from "./CategoriesSlider";
 import FeatureProperty from "./FeatureProperty";
 import { Helmet } from "react-helmet-async";
+import GoogleMap from "../GoogleMap/GoogleMap";
+import Contact from "../Contact/Contact";
 
 
 const Home = () => {
@@ -20,7 +22,7 @@ const Home = () => {
             <CategoriesSlider></CategoriesSlider>
             <div className="my-20">
     <div className="text-center mb-14">
-<h2 className="text-4xl mb-6 text-orange-600 font-bold">Features</h2>
+<h2 className="text-4xl mb-6 text-[#bc986b] font-bold">Estates</h2>
 <p>A studio apartment has a single bedroom with no living room. A one-bedroom apartment has a living or dining room separate from the bedroom. Two bedroom, three bedroom, and larger.</p>
 </div>
 
@@ -35,6 +37,8 @@ const Home = () => {
         </div>
         
     </div>
+    <Contact></Contact>
+    <GoogleMap></GoogleMap>
             <Footer></Footer>
         </div>
     );

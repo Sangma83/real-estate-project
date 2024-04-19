@@ -20,17 +20,17 @@ const FeatureDetail = () => {
             <div className="card lg:card-side bg-base-100 shadow-xl my-10">
                 <figure className=""><img className=" shadow-2xl rounded-lg" src={feature?.image} alt="Property"/></figure> 
                 <div className="card-body w-full p-14 ml-10">
-                    <h2 className="card-title">{feature?.estate_title}</h2>
-                    <div className="badge bg-[#FF7F00] text-white skeleton">{feature?.status}</div>
+                    <h2 className="card-title text-orange-900 font-bold">{feature?.estate_title}</h2>
+                    <div className="badge bg-[#8e693d] text-white skeleton">{feature?.status}</div>
                     <p>{feature?.location}, {feature?.area}</p>
                     <div className="card-actions justify-end">
-                        <p className="font-bold text-orange-400">{feature?.price}</p>
+                        <p className="font-bold text-[#6d5333]">{feature?.price}</p>
                         <div className="badge badge-outline mr-20 bg-orange-500 text-white">{feature?.segment_name}</div>
                     </div>
                     <p>{feature?.description}</p>
                     
                     <ul>
-                    <p className="font-bold text-orange-500">Facilities:</p>
+                    <p className="font-bold text-[#654d30]">Facilities:</p>
                         <li>{feature?.facilities[0]}</li>
                         <li>{feature?.facilities[1]}</li>
                         <li>{feature?.facilities[2]}</li>

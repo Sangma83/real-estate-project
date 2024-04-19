@@ -14,7 +14,7 @@ const FeatureProperty = ({features}) => {
   <div className="card-body">
     <h2 className="card-title">
       {estate_title}
-      <div className="btn ml-36 -mt-32 px-8 bg-[#FF7F00] text-white mask mask-parallelogram-3 skeleton">{status}</div>
+      <div className="btn ml-36 -mt-32 px-8 bg-[#bc986b] text-white mask mask-parallelogram-3 skeleton">{status}</div>
     </h2>
         <p className="font-bold">{location},{area}</p>
         <div className="card-actions justify-end">
@@ -23,12 +23,12 @@ const FeatureProperty = ({features}) => {
     </div>
     <p>{description}</p>
     <ul>
-      <li className="flex items-center gap-2"><FaHandPointRight className="text-orange-500" />{facilities[0]}</li>
-      <li className="flex items-center gap-2"><FaHandPointRight className="text-orange-500"  />{facilities[1]}</li>
-      <li className="flex items-center gap-2"><FaHandPointRight className="text-orange-500" />{facilities[2]}</li>
+      <li className="flex items-center gap-2"><FaHandPointRight className="text-[#916e43]" />{facilities[0]}</li>
+      <li className="flex items-center gap-2"><FaHandPointRight className="text-[#916e43]"  />{facilities[1]}</li>
+      <li className="flex items-center gap-2"><FaHandPointRight className="text-[#916e43]" />{facilities[2]}</li>
     </ul>
     <div className="">
-    <Link to={`/features/${id}`}> <button className="btn btn-error text-white">View Property</button></Link>
+    <Link to={`/features/${id}`}> <button className="btn bg-[#bc986b]">View Property</button></Link>
        
     </div>
   </div>

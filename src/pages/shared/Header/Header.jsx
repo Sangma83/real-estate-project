@@ -80,7 +80,7 @@ const Header = () => {
                     <p className="mb-5 text-white">And In Order To Make A Business, Brand Advertising And Marketing Plays
                         An Important Role. Similarly, In Making Cultivation Business A Brand,
                         Good Slogans Are Necessary.</p>
-                    <button className="btn btn-error text-white">Discover More +</button>
+                    <button className="btn bg-[#bc986b] text-white">Discover More +</button>
                 </div>
 
                 <div className="stats shadow-xl bg-opacity-50 mt-96 z-10" style={statsStyle}>
@@ -88,13 +88,13 @@ const Header = () => {
                     <div className="stat-title flex gap-4  text-black font-bold"> 
                     Location<FaMapMarkerAlt />
                     </div>
-                    <div className="stat-desc text-neutral-800 mr-4">Select Your City</div>
+                    <div className="stat-desc text-neutral-800 mr-4 text-orange-700">Select Your City</div>
                 </div>
                 <div className="stat place-items-center" style={statStyle}>
                     <div className="stat-title flex gap-4 text-black font-bold">
                          Price Range<FaDollarSign />
                     </div>
-                    <div className="stat-desc text-neutral-800 mr-4">Choose Price Range</div>
+                    <div className="stat-desc text-neutral-800 mr-4 text-orange-700">Choose Price Range</div>
                 </div>
                 <div className="stat place-items-center" style={statStyle}>
                     <div className="stat-title flex gap-4 text-black font-bold">

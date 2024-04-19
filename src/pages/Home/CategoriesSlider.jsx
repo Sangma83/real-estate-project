@@ -17,7 +17,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 const CategoriesSlider = () => {
     return (
       <div className='my-12 container'>
-        <h2 className="text-3xl text-center font-bold mb-5 text-orange-600">Categories</h2>
+        <h2 className="text-3xl text-center font-bold mb-5 text-[#bc986b]">Categories</h2>
         <style>
           {`
           /* Custom styles for the slider */
