@@ -10,7 +10,9 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import FeatureProperty from "../pages/Home/FeatureProperty";
 import Profile from "../pages/Profile/Profile";
 import Blog from "../pages/Blog/Blog";
-import Contact from "../pages/Contact/Contact";
+import ContactRoute from "../pages/Contact/ContactRoute";
+import Estate from "../pages/Estates/Estate";
+// import Contact from "../pages/Contact/Contact";
 
 
 const route = createBrowserRouter([
@@ -35,7 +37,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <Contact></Contact>
+                element: <ContactRoute></ContactRoute>
             },
             {
                 path: '/register',
@@ -43,7 +45,8 @@ const route = createBrowserRouter([
             },
             {
                 path: '/estates',
-                element: <PrivateRoute><FeatureProperty></FeatureProperty></PrivateRoute>
+                element: <PrivateRoute><Estate></Estate></PrivateRoute>,
+                loader: () => fetch('/residential.json')
             },
             {
                 path: '/profile',
