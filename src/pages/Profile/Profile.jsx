@@ -1,15 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth"; 
 import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
 import { Link } from "react-router-dom";
+import defaultImage from "../../assets/default.jpg";
 
 const Profile = () => {
-  const { currentUser } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
+  const [displayName, setDisplayName] = useState(""); 
 
   useEffect(() => {
-    // Simulate loading delay for demonstration purposes
+    
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -17,23 +20,71 @@ const Profile = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+
+  const handleSaveChanges = async () => {
+    try {
+      
+      await updateProfile(user, { displayName });
+      alert("Profile updated successfully!");
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      alert("Error updating profile. Please try again.");
+    }
+  };
+
   return (
     <div>
-      <Navbar currentUser={currentUser} />
+      <Navbar user={user} />
       <div className="container mx-auto px-4">
         {loading ? (
           <div className="text-center mt-8">Loading...</div>
         ) : (
           <div>
-            {currentUser ? (
-              <div>
-                <h1 className="text-4xl font-bold mt-8">Welcome, {currentUser.email}</h1>
-                <p className="mt-4">You are logged in as {currentUser.displayName || 'Anonymous'}</p>
-                <p className="mt-4">User ID: {currentUser.uid}</p>
-                {/* Add more user information here */}
+            {user ? (
+              <div className="bg-base-200">
+                <div className="hero-content mx-52 flex-col">
+                  <div className="card shrink-0 w-full shadow-2xl bg-base-100">
+                    <form className="card-body">
+                    <img
+                          src={user.photoURL && defaultImage} 
+                          alt="Profile"
+                          className="w-20 h-20 rounded-full object-cover mr-4"
+                        />
+                      <div className="form-control">
+                        <input
+                          type="text"
+                          placeholder={user.displayName || "Anonymous"}
+                          className="input input-bordered"
+                          value={displayName}
+                          onChange={(e) => setDisplayName(e.target.value)} // Update the displayName state as the user types
+                        />
+                      </div>
+                      <div className="form-control">
+                        <input
+                          type="email"
+                          placeholder={user.email}
+                          className="input input-bordered"
+                          
+                        />
+                        <label className="label">
+                          <a href="#" className="label-text-alt link link-hover">
+                            Want to change your email?
+                          </a>
+                        </label>
+                      </div>
+                      <div className="form-control mt-6">
+                        <button type="button" className="btn btn-primary" onClick={handleSaveChanges}>
+                          Save Changes
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             ) : (
-              <div className="text-center mt-8">No user logged in. Please <Link to="/login" className="text-blue-500">login</Link> or <Link to="/register" className="text-blue-500">register</Link>.</div>
+              <div className="text-center mt-8">
+                No user logged in. Please <Link to="/login" className="text-blue-500">login</Link> or <Link to="/register" className="text-blue-500">register</Link>.
+              </div>
             )}
           </div>
         )}

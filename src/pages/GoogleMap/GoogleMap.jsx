@@ -1,11 +1,12 @@
 import GoogleMapReact from 'google-map-react';
-
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { googleAPIKey } from '../googleAPIKey';
 
-
-
-const AnyReactComponent = ({ text }) => <div style={{color: 'red'}}><FaMapMarkerAlt /></div>;
+const AnyReactComponent = ({ text }) => (
+  <div style={{ color: 'red' }}>
+    <FaMapMarkerAlt />
+  </div>
+);
 
 function GoogleMap() {
   const defaultProps = {
@@ -17,8 +18,7 @@ function GoogleMap() {
   };
 
   return (
-    <>
-      <div className='mb-4' style={{ height: '500px', width: '1150px' }}>
+    <div className='mb-4' style={{ height: '500px', width: '1150px' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: googleAPIKey }}
         defaultCenter={defaultProps.center}
@@ -31,8 +31,7 @@ function GoogleMap() {
         />
       </GoogleMapReact>
     </div>
-    </>
-  )
+  );
 }
 
 export default GoogleMap;
