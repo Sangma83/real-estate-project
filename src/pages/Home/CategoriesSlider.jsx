@@ -99,7 +99,7 @@ const CategoriesSlider = () => {
        modules={[EffectCoverflow, Pagination, Navigation]}
        className='swiper_container'
        >
-        {/* <div className="grid grid-cols-6 gap-6"> */}
+       
         
           <SwiperSlide>
           <div className="slide slide1" >

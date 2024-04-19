@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import Footer from "../shared/Footer/Footer";
 import Header from "../shared/Header/Header";
 import Navbar from "../shared/Navbar/Navbar";
@@ -23,6 +23,7 @@ const Home = () => {
 <h2 className="text-4xl mb-6 text-orange-600 font-bold">Features</h2>
 <p>A studio apartment has a single bedroom with no living room. A one-bedroom apartment has a living or dining room separate from the bedroom. Two bedroom, three bedroom, and larger.</p>
 </div>
+
         <div className="grid grid-cols-3 gap-12">
         {
             features.map(feature => <FeatureProperty
@@ -32,7 +33,7 @@ const Home = () => {
         }
        
         </div>
-
+        
     </div>
             <Footer></Footer>
         </div>
