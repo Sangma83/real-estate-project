@@ -18,7 +18,7 @@ function GoogleMap() {
   };
 
   return (
-    <div className='mb-4' style={{ height: '500px', width: '1150px' }}>
+    <div className='mb-4' style={{ height: '50vh', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: googleAPIKey }}
         defaultCenter={defaultProps.center}

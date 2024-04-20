@@ -58,14 +58,16 @@ const Header = () => {
             loop={true}
             navigation={true}
             pagination={true} 
-            style={sliderStyle}>
-                <SwiperSlide style={slideStyle}><img src={banner} alt="" style={slideImageStyle} /></SwiperSlide>
-                <SwiperSlide style={slideStyle}><img src={banner2} alt="" style={slideImageStyle} /></SwiperSlide>
-                <SwiperSlide style={slideStyle}><img src={banner3} alt="" style={slideImageStyle} /></SwiperSlide>
+            style={sliderStyle}
+            className="w-full h-full"
+            >
+                <SwiperSlide style={slideStyle}><img className="w-full h-full object-cover" src={banner} alt="" style={slideImageStyle} /></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img className="w-full h-full object-cover" src={banner2} alt="" style={slideImageStyle} /></SwiperSlide>
+                <SwiperSlide style={slideStyle}><img className="w-full h-full object-cover" src={banner3} alt="" style={slideImageStyle} /></SwiperSlide>
             </Swiper>
 
             {/* <div className="hero-overlay bg-opacity-50" style={heroOverlayStyle}></div> */}
-            <div className="hero-content text-center text-neutral-content" style={heroContentStyle}>
+            <div className="hero-content text-center text-neutral-content grid grid-cols-1 lg:grid-cols-2" style={heroContentStyle}>
                 <div className="max-w-md bg-slate-500 p-4 bg-opacity-50 rounded-lg">
                     <h1 className="mb-5 text-5xl font-bold text-white  ">Your dream home is our top priority</h1>
                     <p className="mb-5 text-white">And In Order To Make A Business, Brand Advertising And Marketing Plays
@@ -74,7 +76,7 @@ const Header = () => {
                     <button className="btn bg-[#bc986b] text-white">Discover More +</button>
                 </div>
 
-                <div className="stats shadow-xl bg-opacity-50 mt-96 z-10" style={statsStyle}>
+                <div className="stats shadow-xl bg-opacity-50 lg:mt-96 lg:z-10 " style={statsStyle}>
                 <div className="stat place-items-center" style={statStyle}>
                     <div className="stat-title flex gap-4  text-black font-bold"> 
                     Location<FaMapMarkerAlt />

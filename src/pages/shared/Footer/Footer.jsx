@@ -8,8 +8,8 @@ const Footer = () => {
          <footer className="footer p-10 bg-base-200 text-base-content">
   <aside className='mr-32'>
   
-        <img className='w-1/5' src={logo} alt="" />
-        <p className='-mt-8 text-blue-900 font-bold'>Maple<span className='text-orange-500'>Ridge</span></p>
+        <img className='w-1/4 lg:w-1/5' src={logo} alt="" />
+        <p className='-mt-5 lg:-mt-8 text-blue-900 font-bold'>Maple<span className='text-orange-500'>Ridge</span></p>
     
     <p>Maple Ridge Industries Ltd.<br/>Providing reliable since 1998</p>
     <div className="flex gap-4 text-xl">

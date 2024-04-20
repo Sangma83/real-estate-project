@@ -9,10 +9,9 @@ import defaultImage from "../../assets/default.jpg";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
-  const [displayName, setDisplayName] = useState(""); 
+  const [displayName, setDisplayName] = useState(user.displayName || ""); // Set initial display name to user's current display name
 
   useEffect(() => {
-    
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -20,10 +19,9 @@ const Profile = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-
   const handleSaveChanges = async () => {
     try {
-      
+     
       await updateProfile(user, { displayName });
       alert("Profile updated successfully!");
     } catch (error) {
@@ -33,23 +31,24 @@ const Profile = () => {
   };
 
   return (
-    <div>
+    <div className="grid grid-cols-1 lg:grid-cols-1 ">
       <Navbar user={user} />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-8">
         {loading ? (
           <div className="text-center mt-8">Loading...</div>
         ) : (
           <div>
             {user ? (
               <div className="bg-base-200">
-                <div className="hero-content mx-52 flex-col">
+                 <p className="font-bold text-center text-2xl">User Profile</p>
+                <div className="hero-content mx-8 md:mx-16 lg:mx-52 flex-col">
                   <div className="card shrink-0 w-full shadow-2xl bg-base-100">
                     <form className="card-body">
-                    <img
-                          src={user.photoURL && defaultImage} 
-                          alt="Profile"
-                          className="w-20 h-20 rounded-full object-cover mr-4"
-                        />
+                      <img
+                        src={user?.photoURL || defaultImage} 
+                        alt="Profile"
+                        className="w-20 h-20 rounded-full object-cover lg:ml-64 ml-28 md:ml-44"
+                      />
                       <div className="form-control">
                         <input
                           type="text"
@@ -64,7 +63,7 @@ const Profile = () => {
                           type="email"
                           placeholder={user.email}
                           className="input input-bordered"
-                          
+                      
                         />
                         <label className="label">
                           <a href="#" className="label-text-alt link link-hover">

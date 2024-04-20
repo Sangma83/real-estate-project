@@ -26,7 +26,7 @@ const Home = () => {
 <p>A studio apartment has a single bedroom with no living room. A one-bedroom apartment has a living or dining room separate from the bedroom. Two bedroom, three bedroom, and larger.</p>
 </div>
 
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-16 ml-12 lg:ml-0 my-11 mb-10 lg:mb-0">
         {
             features.map(feature => <FeatureProperty
             key={feature.id}

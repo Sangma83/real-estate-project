@@ -41,7 +41,7 @@ const Navbar = () => {
       </ul>
     </div>
     <div className='mb-4' >
-        <img className='w-1/4' src={logo} alt="" />
+        <img className='w-1/2 lg:w-1/4' src={logo} alt="" />
         <p className='-mt-6 text-blue-900 font-bold'>Maple<span className='text-orange-500'>Ridge</span></p>
     </div>
   </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
                        
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" data-tip={user.name}>
                             <div className="w-10 rounded-full" >
-                                <img alt="User profile" className="" src={user.profileImage || defaultPic} />
+                                <img alt="User profile" className="" src={user?.photoURL || defaultPic}  />
                             </div>
                         </div>
                        

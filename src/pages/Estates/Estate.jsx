@@ -11,7 +11,7 @@ const Estate = () => {
             <Navbar></Navbar>
        
         
-                <div className="grid grid-cols-3 gap-16 my-11">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-16 ml-12 lg:ml-0 my-11">
                 {
                     features.map(feature => <FeatureProperty
                     key={feature.id}

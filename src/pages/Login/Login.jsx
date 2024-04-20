@@ -88,9 +88,9 @@ const Login = () => {
   <div className="hero-content flex-col lg:flex-row-reverse gap-4">
     <div className="text-center lg:text-left">
       <h1 className="text-4xl font-bold ml-20">Login now!</h1>
-     <img className="w-2/3  mt-4 " src={loginPic} alt="" />
+     <img className="w-2/3  mt-4 ml-28 lg:ml-0 " src={loginPic} alt="" />
     </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ml-28">
+    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 lg:ml-28">
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">

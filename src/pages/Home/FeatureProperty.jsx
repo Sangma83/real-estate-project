@@ -8,7 +8,7 @@ const FeatureProperty = ({features}) => {
      
         
             
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl mb-10 lg:mb-0">
             
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
