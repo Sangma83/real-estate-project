@@ -48,7 +48,7 @@ const Profile = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-1 ">
       <Helmet>
-        <title>Maple Ridge || Profile</title>
+        <title>Maple Ridge || Update profile</title>
       </Helmet>
       <Navbar user={user} />
       <div className="container mx-auto px-4 mb-8">
