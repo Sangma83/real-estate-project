@@ -2,10 +2,14 @@ import { ImBin } from "react-icons/im";
 import { TiPencil } from "react-icons/ti";
 import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 const ContactRoute = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Maple Ridge || Contact Us</title>
+      </Helmet>
       <Navbar />
       <div className="container mx-auto py-20 px-4 sm:px-6 lg:px-8 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

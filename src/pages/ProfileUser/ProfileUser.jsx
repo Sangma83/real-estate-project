@@ -4,6 +4,7 @@ import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
 import { Link } from "react-router-dom";
 import defaultImage from "../../assets/default.jpg";
+import { Helmet } from "react-helmet-async";
 
 const ProfileUser = () => {
   const { user } = useContext(AuthContext);
@@ -22,6 +23,9 @@ const ProfileUser = () => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-1 ">
+      <Helmet>
+        <title>Maple Ridge || Update profile</title>
+      </Helmet>
       <Navbar user={user} />
       <div className="container mx-auto px-4 mb-8">
         {loading ? (

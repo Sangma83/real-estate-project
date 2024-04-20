@@ -52,15 +52,14 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  {/* Conditional rendering based on user authentication */}
+  
   {user ? (
                     <>
                        
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip-top" data-tip={user.name}>
-                            <div className="w-10 rounded-full" >
-                                <img alt="User profile" className="" src={user?.photoURL || defaultPic}  />
-                            </div>
-                        </div>
+
+                          <div className="tooltip" data-tip={user.displayName}>
+                <button className=""><img alt="User profile" className="w-10 rounded-full" src={user?.photoURL || defaultPic}  /></button>
+                     </div>
                        
                         {/* <span>{user?.name}</span> */}
                         <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>

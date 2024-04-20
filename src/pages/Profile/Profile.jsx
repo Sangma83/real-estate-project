@@ -6,6 +6,7 @@ import Footer from "../shared/Footer/Footer";
 import { Link } from "react-router-dom";
 import defaultImage from "../../assets/default.jpg";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -46,6 +47,9 @@ const Profile = () => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-1 ">
+      <Helmet>
+        <title>Maple Ridge || Profile</title>
+      </Helmet>
       <Navbar user={user} />
       <div className="container mx-auto px-4 mb-8">
         {loading ? (
