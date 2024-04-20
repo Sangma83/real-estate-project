@@ -23,7 +23,8 @@ const Navbar = () => {
       {
         user && <>
          <li><NavLink to='/blog'>Blog</NavLink></li>
-         <li><NavLink to='/profile'>Profile</NavLink></li>
+         <li><NavLink to='/user'>Profile</NavLink></li>
+         <li><NavLink to='/update'>Update Profile</NavLink></li>
         </>
       }
     
@@ -55,13 +56,13 @@ const Navbar = () => {
   {user ? (
                     <>
                        
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" data-tip={user.name}>
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip-top" data-tip={user.name}>
                             <div className="w-10 rounded-full" >
                                 <img alt="User profile" className="" src={user?.photoURL || defaultPic}  />
                             </div>
                         </div>
                        
-                        <span>{user?.name}</span>
+                        {/* <span>{user?.name}</span> */}
                         <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
                     </>
                 ) : (

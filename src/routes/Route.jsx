@@ -12,6 +12,7 @@ import Profile from "../pages/Profile/Profile";
 import Blog from "../pages/Blog/Blog";
 import ContactRoute from "../pages/Contact/ContactRoute";
 import Estate from "../pages/Estates/Estate";
+import ProfileUser from "../pages/ProfileUser/ProfileUser";
 // import Contact from "../pages/Contact/Contact";
 
 
@@ -49,8 +50,12 @@ const route = createBrowserRouter([
                 loader: () => fetch('/residential.json')
             },
             {
-                path: '/profile',
+                path: '/update',
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path: '/user',
+                element: <PrivateRoute><ProfileUser></ProfileUser> </PrivateRoute>
             },
             {
                 path: '/blog',

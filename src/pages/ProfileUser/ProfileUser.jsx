@@ -1,16 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { updateProfile } from "firebase/auth"; 
 import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
 import { Link } from "react-router-dom";
 import defaultImage from "../../assets/default.jpg";
-import { ToastContainer, toast } from "react-toastify";
 
-const Profile = () => {
+const ProfileUser = () => {
   const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
-  const [newPhoto, setNewPhoto] = useState(null);
   const [displayName, setDisplayName] = useState(user.displayName || ""); 
 
   useEffect(() => {
@@ -21,28 +18,7 @@ const Profile = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleSaveChanges = async () => {
-    try {
-     
-      if (newPhoto) {
-        const updatedUser = { ...user, photoURL: newPhoto };
-        await updateProfile(updatedUser);
-      }
 
-      // Update the display name
-      await updateProfile(user, { displayName });
-      
-      toast("Profile updated successfully!");
-    } catch (error) {
-      console.error("Error updating profile:", error);
-      toast.error("Error updating profile. Please try again.");
-    }
-  };
-
-  const handlePhotoChange = (e) => {
-    const file = e.target.files[0];
-    setNewPhoto(file);
-}
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-1 ">
@@ -59,28 +35,17 @@ const Profile = () => {
                   <div className="card shrink-0 w-full shadow-2xl bg-base-100">
                     <form className="card-body">
                     <img
-                        src={newPhoto ? URL.createObjectURL(newPhoto) : user?.photoURL || defaultImage}
+                        src={user?.photoURL || defaultImage} 
                         alt="Profile"
                         className="w-20 h-20 rounded-full object-cover lg:ml-64 ml-28 md:ml-44"
                       />
-                      {/* Input field for selecting a new photo */}
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handlePhotoChange}
-                        className="hidden"
-                        id="photoInput"
-                      />
-                       <label htmlFor="photoInput" className="btn btn-ghost mt-2">
-                        Select Photo
-                      </label>
                       <div className="form-control">
                         <input
                           type="text"
                           placeholder={user.displayName || "Anonymous"}
                           className="input input-bordered"
                           value={displayName}
-                          onChange={(e) => setDisplayName(e.target.value)} 
+                          
                         />
                       </div>
                       <div className="form-control">
@@ -92,17 +57,17 @@ const Profile = () => {
                         />
                         <label className="label">
                           <a href="#" className="label-text-alt link link-hover">
-                            Want to change your email?
+                            Want to change your information?
                           </a>
                         </label>
                       </div>
                       <div className="form-control mt-6">
-                        <button type="button" className="btn btn-primary" onClick={handleSaveChanges}>
-                          Save Changes
-                        </button>
+                        <Link to='/update'><button type="button" className="btn btn-primary">
+                          Edit
+                        </button></Link>
                       </div>
                     </form>
-                    <ToastContainer></ToastContainer>
+                    
                   </div>
                 </div>
               </div>
@@ -119,4 +84,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileUser;
