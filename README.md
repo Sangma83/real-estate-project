@@ -9,12 +9,6 @@ Welcome to Maple Ridge, your premier destination for exploring real estate listi
 
 - **Residential**: Single-family homes, townhouses, apartments, student housing, senior living communities, vacation rentals, and more.
 
-
-### Website Design
-1. design is unique.
-2. Website name will show on the website title.
-3. The home page will have these sections - Navbar, Slider, Estates, Footer & 2 extra sections.
-
 ### Navbar
 - The home page will have a navbar with active routes.
 - The navbar will contain the Website name, Home, Update Profile, and user profile.
