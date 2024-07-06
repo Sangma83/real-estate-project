@@ -10,14 +10,6 @@ Welcome to Maple Ridge, your premier destination for exploring real estate listi
 - **Residential**: Single-family homes, townhouses, apartments, student housing, senior living communities, vacation rentals, and more.
 
 
-## Key Rules:
-- Included minimum of 10 notable Github commits.
-- Added a meaningful readme.md file with the name of your website and a live site URL.
-- Include a minimum of five bullet points features and characteristics of your website.
-- Add the npm package name which you have used for the challenges task.
-- Make it responsive for all devices.
-- Use environment variables for Firebase config keys.
-
 ### Website Design
 1. design is unique.
 2. Website name will show on the website title.
@@ -71,13 +63,8 @@ Welcome to Maple Ridge, your premier destination for exploring real estate listi
 - Once a user is logged in, user information will show on the navbar even if they reload the website.
 - Show a loader when the logged-in user info is in a loading state.
 
-## Challenges Requirements
-1. Implement show and hide passwords on the registration page.
-2. Implement 3 packages from the following list:
-   - Animate.css
-   - React-leaflet
-   - Swiper slider
-3. Create a protected route where users can see and edit their information.
+## Technology used
+- React.js, Tailwind, Firebase, Tenstack Query.
 
 
  ## NPM Packages Used
